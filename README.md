@@ -2,20 +2,21 @@
 
 # Required Tasks
 
-* Create a product listing page using the polaris component library & the provided products data api
+* Create a product listing page using the polaris component library & the provided products data api, (use this [component](https://polaris.shopify.com/components/lists-and-tables/resource-list#navigation) to build the product list page)
 * Add the ability to search & filter the products by category & sort by ASC / DESC order.
 * Create a cart page that will display the products the user has added to the cart with a total price, calculated based on items in the cart (use redux to store the state of the cart)
 * Add ability for products in the product list to be added to the cart via an "add to cart" button.
 
 
-The design of the cart page is totaly up to you, you can use the linked component library to create a simple page with a list component to show the cart line items and grand total price. 
+The design of the cart page is totally up to you, you can use the linked component library to create a simple page with a list component to show the cart line items and grand total price. 
 
 # Tech Stack Required For This Test
 * [React](https://reactjs.org/)
 * [Redux](https://redux.js.org/)
+* [Redux Toolkit](https://redux-toolkit.js.org/) (if you have not used the redux toolkit, you are more than welcome to strip it out and just use redux like you currently know how)
 * [Axios](https://github.com/axios/axios)
 
-Sidenote: Tests are not required but adding tests using Jest / Enzyme is a bonus. 
+Side note: Tests are not required but adding tests using Jest / Enzyme is a bonus. 
 * [Enzyme](https://enzymejs.github.io/enzyme/)
 * [Jest](https://jestjs.io/)
  
@@ -31,7 +32,7 @@ Sidenote: Tests are not required but adding tests using Jest / Enzyme is a bonus
 # How To Start The Test:
 
 Once you have been sent this repo link, you can clone the repo and start when you are ready. 
-You are required to use the tech stack that is listed above, but you are free to use any other 3rd party librarys to help you complete the A/C (tasks)
+You are required to use the tech stack that is listed above, but you are free to use any other 3rd party library's to help you complete the A/C (tasks)
 
 # About Nessa
 
