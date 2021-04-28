@@ -1,11 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Page, Card, Button} from '@shopify/polaris';
+
 
 function App() {
   return (
     <div className="App">
-
+      <Page title="Example app">
+        <Card sectioned>
+          <Button onClick={() => alert('Button clicked!')}>Example button</Button>
+        </Card>
+      </Page>
     </div>
   );
 }
