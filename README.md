@@ -11,12 +11,12 @@
 The design of the cart page is totally up to you, you can use the linked component library to create a simple page with a list component to show the cart line items and grand total price. 
 
 # Tech Stack Required For This Test
-* [React](https://reactjs.org/)
+* [React](https://reactjs.org/) (Please use hooks and not class based components)
 * [Redux](https://redux.js.org/)
 * [Redux Toolkit](https://redux-toolkit.js.org/) (if you have not used the redux toolkit, you are more than welcome to strip it out and just use redux like you currently know how)
 * [Axios](https://github.com/axios/axios)
 
-Side note: Tests are not required but adding tests using Jest / Enzyme is a bonus. 
+Side note: Tests are not required for this project but adding tests using Jest / Enzyme is a bonus. 
 * [Enzyme](https://enzymejs.github.io/enzyme/)
 * [Jest](https://jestjs.io/)
  
@@ -33,6 +33,13 @@ Side note: Tests are not required but adding tests using Jest / Enzyme is a bonu
 
 Once you have been sent this repo link, you can clone the repo and start when you are ready. 
 You are required to use the tech stack that is listed above, but you are free to use any other 3rd party library's to help you complete the A/C (tasks)
+
+# How To Submit Your Finished Test
+
+You can email paul@nessalab.com with a link to your repo for review.
+Thank you for taking the time to complete the Nessa frontend (React) test!
+
+If you run into any issues or have more questions about any of the tasks feel free to email paul@nessalab.com and we will provide the support you require. 
 
 # About Nessa
 
