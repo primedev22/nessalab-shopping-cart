@@ -18,6 +18,11 @@ function Cart() {
   const history = useHistory();
   const items = useSelector(selectCart);
 
+  const totalPrice = Object.values(items).reduce((sum, item) => {
+    sum += item.price * item.amount;
+    return +sum.toFixed(2);
+  }, 0.0);
+
   return (
     <div>
       <Page>
@@ -48,6 +53,9 @@ function Cart() {
             }}
           />
         </Card>
+        <div className={styles.footer}>
+          <Heading>Total price: ${totalPrice}</Heading>
+        </div>
       </Page>
     </div>
   );

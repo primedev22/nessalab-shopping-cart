@@ -10,3 +10,10 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
