@@ -14,12 +14,12 @@ export const cartSlice = createSlice({
 
 export const { setCart } = cartSlice.actions;
 
-export const addToCart = ({ id, title, price }) => (dispatch, getState) => {
+export const addToCart = (product) => (dispatch, getState) => {
   const items = JSON.parse(JSON.stringify(getState().cart.items));
-  if (items[id] === undefined) {
-    items[id] = { title, price, amount: 1 };
+  if (items[product.id] === undefined) {
+    items[product.id] = { ...product, amount: 1 };
   } else {
-    items[id].amount += 1;
+    items[product.id].amount += 1;
   }
   dispatch(setCart(items));
 };

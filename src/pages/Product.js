@@ -1,9 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory } from "react-router-dom";
-import { useSelector, useDispatch } from 'react-redux';
-import { Page, Card, Button, Select, ResourceList, ResourceItem, Heading, Subheading, Thumbnail } from '@shopify/polaris';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  Button,
+  Card,
+  Heading,
+  Page,
+  ResourceItem,
+  ResourceList,
+  Select,
+  Subheading,
+  Thumbnail,
+} from '@shopify/polaris';
 import { getCategories, selectCategories } from '../app/categorySlice';
 import { getProducts, selectProducts } from '../app/productSlice';
+import { addToCart } from '../app/cartSlice';
 import styles from './Product.module.css';
 
 function Product() {
@@ -14,7 +25,9 @@ function Product() {
   const products = useSelector(selectProducts);
 
   const history = useHistory();
+
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(getCategories());
   }, [dispatch]);
@@ -25,10 +38,10 @@ function Product() {
 
   const handleFilterChange = (value) => setFilter(value);
   const handleSortChange = (value) => setSort(value);
-  const addToCart = (product) => () => {};
+  const handleAddToCart = (value) => () => dispatch(addToCart(value));
 
   return (
-    <Page title="Product">
+    <Page>
       <div className={styles.header}>
         <div className={styles.options}>
           <Select
@@ -69,7 +82,7 @@ function Product() {
               >
                 <div className={styles['item-header']}>
                   <Heading>{title}</Heading>
-                  <Button onClick={addToCart(item)}>Add to cart</Button>
+                  <Button onClick={handleAddToCart(item)}>Add to cart</Button>
                 </div>               
                 <Subheading>[{category}] ${price}</Subheading>
                 <p>{description}</p>
